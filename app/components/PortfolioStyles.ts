@@ -4,26 +4,23 @@ const styles = StyleSheet.create({
   background: { flex: 1 },
   container: { flex: 1 },
   upperSection: {
-    flex: 3, // Adjust the ratio of the upper section
+    flex: 3,
     paddingHorizontal: 20,
     height: -300,
     paddingBottom: 20,
   },
   lowerSection: {
-    flex: 2, // Adjust the ratio of the lower section
+    flex: 2, 
     backgroundColor: '#FFFFFF',
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     padding: 20,
-    marginTop: -500, // Overlap the upper and lower sections
-    // Shadow for iOS
-    shadowColor: '#000', // Black shadow
-    shadowOffset: { width: 0, height: -2 }, // Shadow direction (x, y)
-    shadowOpacity: 0.3, // Opacity of the shadow
-    shadowRadius: 10, // Blur effect
-
-    // Shadow for Android
-    elevation: 5, // Shadow depth
+    marginTop: -500, 
+    shadowColor: '#000', 
+    shadowOffset: { width: 0, height: -2 }, 
+    shadowOpacity: 0.3, 
+    shadowRadius: 10, 
+    elevation: 5, 
   },
   loadingContainer: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   loadingText: { fontSize: 16, color: '#7B42F5', marginTop: 10 },
@@ -63,16 +60,16 @@ const styles = StyleSheet.create({
   currentValueTitle: { fontSize: 16, color: '#FFFFFF' },
   currentValue: { fontSize: 36, color: '#FFFFFF' },
   currentValueContainer: {
-    flexDirection: 'row', // Align rupee icon and text horizontally
-    alignItems: 'center', // Center align vertically
-    justifyContent: 'center', // Center align horizontally
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    justifyContent: 'center', 
     marginTop: 10,
   },
   rupeeIcon: {
-    width: 40, // Adjust size as needed
-    height: 40, // Adjust size as needed
-    tintColor: '#FFFFFF', // Ensure the rupee icon matches the text color
-    marginRight: 0, // Space between icon and text
+    width: 40, 
+    height: 40, 
+    tintColor: '#FFFFFF', 
+    marginRight: 0, 
   },
   totalReturnsContainer: {
     flexDirection: 'row',
@@ -115,9 +112,9 @@ const styles = StyleSheet.create({
   metricValue: { fontSize: 16, color: '#FFFFFF', marginTop: 5 },
 
   graphPlaceholder: {
-    //flex: , // Allow it to occupy available vertical space
-    justifyContent: 'flex-start', // Center the graph vertically
-    alignItems: 'center', // Center the graph horizontally
+    //flex: , 
+    justifyContent: 'flex-start', 
+    alignItems: 'center', 
     marginBottom: 40,
     marginTop: -20,
     width: '100%',
@@ -125,86 +122,82 @@ const styles = StyleSheet.create({
   },
   graph: {
     flexDirection: 'column',
-    width: '100%', // Makes the graph take 95% of the screen width
-    height: undefined, // Ensures height scales proportionally
-    aspectRatio: 16 / 9, // Match the aspect ratio of the graph image
-    resizeMode: 'contain', // Ensure the image scales properly without cropping
+    width: '100%', 
+    height: undefined, 
+    aspectRatio: 16 / 9, 
+    resizeMode: 'contain', 
 
   },
 
   investButton: {
-    backgroundColor: '#05b463', // Green background
-    padding: 20, // Padding around the button
-    borderRadius: 20, // Rounded corners
-    alignItems: 'center', // Center content horizontally
-    justifyContent: 'center', // Center content vertically
-    flexDirection: 'row', // Align content in a horizontal row
-    marginHorizontal: 0, // Horizontal margin
-    marginBottom: 20, // Space below the button
-    shadowColor: '#227500', // Black shadow
-    shadowOffset: { width: 0, height: 5 }, // Shadow direction (x, y)
-    shadowOpacity: 0.7, // Opacity of the shadow
-    shadowRadius: 3, // Blur effect
-
-    // Shadow for Android
-    elevation: 5, // Shadow depth
+    backgroundColor: '#05b463', 
+    padding: 20, 
+    borderRadius: 20, 
+    alignItems: 'center', 
+    justifyContent: 'center', 
+    flexDirection: 'row', 
+    marginHorizontal: 0, 
+    marginBottom: 20, 
+    shadowColor: '#227500', 
+    shadowOffset: { width: 0, height: 5 }, 
+    shadowOpacity: 0.7, 
+    shadowRadius: 3, 
+    elevation: 5, 
     //marginTop: 0,
   },
   
   investButtonContent: {
-    flexDirection: 'row', // Align the image and text in a horizontal row
-    alignItems: 'center', // Vertically align items
+    flexDirection: 'row', 
+    alignItems: 'center', 
   },
   
   investButtonIcon: {
-    width: 20, // Width of the icon (adjust as needed)
-    height: 20, // Height of the icon (adjust as needed)
+    width: 20, 
+    height: 20, 
     tintColor: '#ffffff',
-    marginRight: 10, // Space between the icon and text
+    marginRight: 10, 
   },
   
   investButtonText: {
-    color: '#FFFFFF', // White text color
-    fontSize: 16, // Font size
-    fontWeight: 'bold', // Bold text
+    color: '#FFFFFF', 
+    fontSize: 16, 
+    fontWeight: 'bold', 
   },
   
 
   loanButton: {
-    backgroundColor: '#5500ff', // Purple background
-    padding: 20, // Padding around the button
-    borderRadius: 20, // Rounded corners
-    alignItems: 'center', // Center content horizontally
-    justifyContent: 'center', // Center content vertically
-    flexDirection: 'row', // Align content in a horizontal row
-    marginHorizontal: 0, // Horizontal margin
-    marginBottom: 10, // Space below the button
-    shadowColor: '#3600a9', // Black shadow
-    shadowOffset: { width: 0, height: 5 }, // Shadow direction (x, y)
-    shadowOpacity: 0.7, // Opacity of the shadow
-    shadowRadius: 3, // Blur effect
-
-    // Shadow for Android
-    elevation: 5, // Shadow depth
+    backgroundColor: '#5500ff', 
+    padding: 20, 
+    borderRadius: 20, 
+    alignItems: 'center', 
+    justifyContent: 'center', 
+    flexDirection: 'row', 
+    marginHorizontal: 0, 
+    marginBottom: 10, 
+    shadowColor: '#3600a9', 
+    shadowOffset: { width: 0, height: 5 }, 
+    shadowOpacity: 0.7, 
+    shadowRadius: 3, 
+    elevation: 5, 
     //marginTop: 0,
   },
   
   loanButtonContent: {
-    flexDirection: 'row', // Align the image and text in a horizontal row
-    alignItems: 'center', // Vertically align items
+    flexDirection: 'row', 
+    alignItems: 'center', 
   },
   
   loanButtonIcon: {
-    width: 20, // Width of the icon (adjust as needed)
-    height: 20, // Height of the icon (adjust as needed)
+    width: 20, 
+    height: 20, 
     tintColor: '#ffffff',
-    marginRight: 10, // Space between the icon and text
+    marginRight: 10, 
   },
   
   loanButtonText: {
-    color: '#FFFFFF', // White text color
-    fontSize: 16, // Font size
-    fontWeight: 'bold', // Bold text
+    color: '#FFFFFF', 
+    fontSize: 16, 
+    fontWeight: 'bold', 
   },
   
   loanIcon: {
@@ -220,64 +213,64 @@ const styles = StyleSheet.create({
     padding: 15,
     alignItems: 'center',
     marginHorizontal: 3,
-    borderWidth: 2, // Purple border
-    borderColor: '#5500FF', // Purple color
+    borderWidth: 2, 
+    borderColor: '#5500FF', 
     borderRadius: 20,
-    backgroundColor: '#FFFFFF', // White background
+    backgroundColor: '#FFFFFF', 
     flexDirection: 'row',
     //overflow: 'hidden',
   },
   portfolioButtonContent: {
-    flexDirection: 'row', // Align the image and text in a horizontal row
-    alignItems: 'center', // Vertically align items
+    flexDirection: 'row', 
+    alignItems: 'center', 
   },
   
   portfolioButtonIcon: {
-    width: 20, // Width of the icon (adjust as needed)
-    height: 20, // Height of the icon (adjust as needed)
+    width: 20, 
+    height: 20, 
     tintColor: '#5500ff',
-    marginRight: 5, // Space between the icon and text
+    marginRight: 5, 
   },
   
   portfolioButtonText: {
-    color: '#000000', // White text color
-    fontSize: 14, // Font size
-    fontWeight: 'bold', // Bold text
+    color: '#000000', 
+    fontSize: 14, 
+    fontWeight: 'bold', 
   },
   redeemButtonContent: {
-    flexDirection: 'row', // Align the image and text in a horizontal row
-    alignItems: 'center', // Vertically align items
+    flexDirection: 'row', 
+    alignItems: 'center', 
   },
   
   redeemButtonIcon: {
-    width: 20, // Width of the icon (adjust as needed)
-    height: 20, // Height of the icon (adjust as needed)
+    width: 20, 
+    height: 20, 
     tintColor: '#5500ff',
-    marginRight: 5, // Space between the icon and text
+    marginRight: 5, 
   },
   
   redeemButtonText: {
-    color: '#000000', // White text color
-    fontSize: 14, // Font size
-    fontWeight: 'bold', // Bold text
+    color: '#000000', 
+    fontSize: 14, 
+    fontWeight: 'bold', 
   },
   transButtonContent: {
-    flexDirection: 'row', // Align the image and text in a horizontal row
-    alignItems: 'center', // Vertically align items
+    flexDirection: 'row', 
+    alignItems: 'center', 
     
   },
   
   transButtonIcon: {
-    width: 20, // Width of the icon (adjust as needed)
-    height: 20, // Height of the icon (adjust as needed)
+    width: 20, 
+    height: 20, 
     tintColor: '#5500ff',
-    marginRight: 5, // Space between the icon and text
+    marginRight: 5, 
   },
   
   transButtonText: {
-    color: '#000000', // White text color
-    fontSize: 14, // Font size
-    fontWeight: 'bold', // Bold text
+    color: '#000000', 
+    fontSize: 14, 
+    fontWeight: 'bold', 
   },
   
 });

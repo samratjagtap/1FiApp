@@ -14,7 +14,7 @@ const useGoogleSheetData = () => {
       try {
         const response = await axios.get(GOOGLE_SHEET_API_URL);
         if (response.data && response.data.values) {
-          const rows = response.data.values.slice(1); // Skip the header row
+          const rows = response.data.values.slice(1); 
           const formattedData = rows.map(([metric, value]: string[]) => ({ metric, value }));
           setData(formattedData);
         } else {

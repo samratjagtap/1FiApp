@@ -11,11 +11,10 @@ import {
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import axios from 'axios';
-import styles from '../components/PortfolioStyles'; // Import external styles
+import styles from '../components/PortfolioStyles'; 
 import * as SplashScreen from 'expo-splash-screen';
 import { useFonts, Poppins_400Regular, Poppins_700Bold } from '@expo-google-fonts/poppins';
 
-// Prevent the splash screen from auto-hiding
 SplashScreen.preventAutoHideAsync();
 
 const GOOGLE_SHEET_API_URL =
@@ -27,7 +26,7 @@ export default function PortfolioScreen() {
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Load Poppins fonts
+  
   const [fontsLoaded] = useFonts({
     Poppins_400Regular,
     Poppins_700Bold,
@@ -39,7 +38,7 @@ export default function PortfolioScreen() {
     try {
       const response = await axios.get(GOOGLE_SHEET_API_URL);
       if (response.data && response.data.values) {
-        const rows = response.data.values.slice(1); // Skip the header row
+        const rows = response.data.values.slice(1); 
         const formattedData = rows.map(([metric, value]: string[]) => ({ metric, value }));
         setData(formattedData);
       } else {
@@ -65,12 +64,12 @@ export default function PortfolioScreen() {
 
   useEffect(() => {
     if (fontsLoaded) {
-      SplashScreen.hideAsync(); // Hide the splash screen once fonts are loaded
+      SplashScreen.hideAsync(); 
     }
   }, [fontsLoaded]);
 
   if (!fontsLoaded) {
-    return null; // Keep the splash screen visible while fonts are loading
+    return null; 
   }
 
   if (loading && !refreshing) {
@@ -90,7 +89,7 @@ export default function PortfolioScreen() {
     );
   }
 
-  // Extract data dynamically from Google Sheets API response
+  
   const currentValue = data.find((item) => item.metric === 'Current Value')?.value || 'N/A';
   const totalReturns = data.find((item) => item.metric === 'Total Returns')?.value || 'N/A';
   const invested = data.find((item) => item.metric === 'Invested')?.value || 'N/A';
