@@ -1,9 +1,8 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-import { Platform } from 'react-native';
+import { Platform, Image } from 'react-native';
 
 import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
@@ -19,25 +18,81 @@ export default function TabLayout() {
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
-          },
+          ios: { position: 'absolute' }, // iOS blur background
           default: {},
         }),
-      }}>
+      }}
+    >
+      {/* Home Tab */}
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: ' ',
+          tabBarIcon: ({ color, focused }) => (
+            <Image
+              source={require('@/assets/images/home.png')}
+              style={{
+                
+                width: 28,
+                height: 28,
+                tintColor: focused ? Colors[colorScheme ?? 'light'].tint : color,
+              }}
+            />
+          ),
         }}
       />
+
+      {/* Portfolio Tab */}
       <Tabs.Screen
-        name="explore"
+        name="portfolio"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: '',
+          tabBarIcon: ({ color, focused }) => (
+            <Image
+              source={require('@/assets/images/portfolio.png')}
+              style={{
+                width: 28,
+                height: 28,
+                tintColor: focused ? Colors[colorScheme ?? 'light'].tint : color,
+              }}
+            />
+          ),
+        }}
+      />
+
+      {/* Wallet Tab */}
+      <Tabs.Screen
+        name="wallet"
+        options={{
+          title: '',
+          tabBarIcon: ({ color, focused }) => (
+            <Image
+              source={require('@/assets/images/wallet.png')}
+              style={{
+                width: 28,
+                height: 28,
+                tintColor: focused ? Colors[colorScheme ?? 'light'].tint : color,
+              }}
+            />
+          ),
+        }}
+      />
+
+      {/* User Tab */}
+      <Tabs.Screen
+        name="user"
+        options={{
+          title: '',
+          tabBarIcon: ({ color, focused }) => (
+            <Image
+              source={require('@/assets/images/user.png')}
+              style={{
+                width: 28,
+                height: 28,
+                tintColor: focused ? Colors[colorScheme ?? 'light'].tint : color,
+              }}
+            />
+          ),
         }}
       />
     </Tabs>
